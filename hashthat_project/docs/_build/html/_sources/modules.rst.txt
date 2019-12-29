@@ -1,0 +1,7 @@
+Modules
+*******
+
+test module
+===========
+.. automodule:: hashing.tests
+    :members:
