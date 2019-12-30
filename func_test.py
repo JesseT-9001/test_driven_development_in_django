@@ -1,10 +1,11 @@
-"""The module was used as an example of a functional test using selenium.
+"""
+The module was used as an example of a functional test using selenium.
 """
 
 from selenium import webdriver
 
 
-def func_test():
+def func_test() -> None:
     """
     :var webdriver safari: Used to operate the safari web-browser
     :var string localhost_8000: Holds the localhost url with port number

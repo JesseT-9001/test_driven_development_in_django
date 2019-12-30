@@ -34,11 +34,11 @@
   <div class="section" id="modules">
 <h1>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="module-func_test">
-<span id="tests-module"></span><h2>tests module<a class="headerlink" href="#module-func_test" title="Permalink to this headline">¶</a></h2>
+<span id="func-test-py-module"></span><h2>func_test.py module<a class="headerlink" href="#module-func_test" title="Permalink to this headline">¶</a></h2>
 <p>The module was used as an example of a functional test using selenium.</p>
 <dl class="function">
 <dt id="func_test.func_test">
-<code class="sig-prename descclassname">func_test.</code><code class="sig-name descname">func_test</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#func_test.func_test" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">func_test</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#func_test.func_test" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
@@ -56,9 +56,62 @@
 </dl>
 </dd></dl>
 
-<span class="target" id="module-hashthat_project.hashing.tests"></span><p>This module is used for creating functional and unit test.</p>
+</div>
+<div class="section" id="module-hashthat_project.hashing.tests">
+<span id="tests-py-module"></span><h2>tests.py module<a class="headerlink" href="#module-hashthat_project.hashing.tests" title="Permalink to this headline">¶</a></h2>
+<p>This module is used for creating functional and unit test.</p>
 <p>To run this module use the following command:
 ‘python manage.py test’</p>
+<dl class="class">
+<dt id="hashthat_project.hashing.tests.FunctionalTest">
+<em class="property">class </em><code class="sig-name descname">FunctionalTest</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#hashthat_project.hashing.tests.FunctionalTest" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="hashthat_project.hashing.tests.FunctionalTest.setUp">
+<code class="sig-name descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#hashthat_project.hashing.tests.FunctionalTest.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>self.safari</strong> (<em>webdriver</em>) – Used to operate the safari web-browser</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="hashthat_project.hashing.tests.FunctionalTest.tearDown">
+<code class="sig-name descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#hashthat_project.hashing.tests.FunctionalTest.tearDown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="hashthat_project.hashing.tests.FunctionalTest.test_there_is_a_hompage">
+<code class="sig-name descname">test_there_is_a_hompage</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#hashthat_project.hashing.tests.FunctionalTest.test_there_is_a_hompage" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is used to test if there is a homepage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>localhost_8000</strong> (<em>string</em>) – Holds the localhost url with port number</p></li>
+<li><p><strong>test_text</strong> (<em>string</em>) – Hold what string you would like tested</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>assertion</strong> – Raised if test_text is not in the page source</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 
@@ -82,7 +135,8 @@
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Modules</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#module-func_test">tests module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-func_test">func_test.py module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-hashthat_project.hashing.tests">tests.py module</a></li>
 </ul>
 </li>
 </ul>
