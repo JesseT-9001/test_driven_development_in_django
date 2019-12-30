@@ -2,6 +2,8 @@ Modules
 *******
 
 tests module
-===========
-.. automodule:: hashing.tests
+============
+.. automodule:: func_test
+    :members:
+.. automodule:: hashthat_project.hashing.tests
     :members:

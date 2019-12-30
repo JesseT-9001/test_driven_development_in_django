@@ -33,11 +33,32 @@
             
   <div class="section" id="modules">
 <h1>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="module-hashing.tests">
-<span id="test-module"></span><h2>test module<a class="headerlink" href="#module-hashing.tests" title="Permalink to this headline">¶</a></h2>
-<p>This module is used for creating functional and unit test.</p>
+<div class="section" id="module-func_test">
+<span id="tests-module"></span><h2>tests module<a class="headerlink" href="#module-func_test" title="Permalink to this headline">¶</a></h2>
+<p>The module was used as an example of a functional test using selenium.</p>
+<dl class="function">
+<dt id="func_test.func_test">
+<code class="sig-prename descclassname">func_test.</code><code class="sig-name descname">func_test</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#func_test.func_test" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>safari</strong> (<em>webdriver</em>) – Used to operate the safari web-browser</p></li>
+<li><p><strong>localhost_8000</strong> (<em>string</em>) – Holds the localhost url with port number</p></li>
+<li><p><strong>test_text</strong> (<em>string</em>) – Hold what string you would like tested</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>assertion</strong> – Raised if test_text is not in the page source</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>nothing</p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-hashthat_project.hashing.tests"></span><p>This module is used for creating functional and unit test.</p>
 <p>To run this module use the following command:
-‘python manage.py test</p>
+‘python manage.py test’</p>
 </div>
 </div>
 
@@ -61,7 +82,7 @@
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Modules</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#module-hashing.tests">test module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-func_test">tests module</a></li>
 </ul>
 </li>
 </ul>

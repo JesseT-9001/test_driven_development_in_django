@@ -1,7 +1,9 @@
 Modules
 *******
 
-test module
-===========
-.. automodule:: hashing.tests
+tests module
+============
+.. automodule:: func_test
+    :members:
+.. automodule:: hashthat_project.hashing.tests
     :members:
