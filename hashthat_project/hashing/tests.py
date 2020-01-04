@@ -9,39 +9,8 @@ from django.test import TestCase
 from selenium import webdriver
 from .forms import HashForm
 import hashlib
-from .models import Hash
-
-
-def hash_to_test():
-    """
-    Easy way to create test data for hash to test.
-
-    :var string text_test: holds test text
-    :var string text_format: holds format for test text
-    :var string hash_text: holds test hash
-
-    :return: test data array that contains text, format of text, hash.
-    """
-    text_test = 'hello'
-    text_format = 'utf-8'
-    hash_test = '2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824'
-    return text_test, text_format, hash_test
-
-
-def create_hash_db():
-    """
-    Creates database entry based on information supplied in hash_to_test function
-
-    :var array test: created data array from hash_to_test
-    :var Hash hash: Empty Hash instant.
-    :return: Modified Hash instant
-    """
-    test = hash_to_test()
-    hash = Hash()
-    hash.text = test[0]
-    hash.hash = test[2]
-    hash.save()
-    return hash
+from .models import *
+from django.core.exceptions import ValidationError
 
 
 class FunctionalTest(TestCase):
@@ -195,6 +164,24 @@ class UnitTest(TestCase):
         response = self.create_response(url)
         self.assertContains(response, hash.text)
 
+    def test_bad_data(self):
+        """
+        tests if error raises if bad information is given for hash value
+
+        :var array test: holds array of test data.
+        :var Hash hash: holds an instance of Hash.
+
+        :except assertion: Raised if the exception 'ValidationError' is not raised.
+
+        :return: None
+        """
+        def bad_hash():
+            test = hash_to_test()
+            hash = Hash()
+            hash.hash = test[2]+'12345'
+            hash.full_clean()
+        self.assertRaises(ValidationError, bad_hash)
+
     def create_response(self, url=None):
         """
         Creates response for testing
@@ -204,3 +191,35 @@ class UnitTest(TestCase):
         :return: response
         """
         return self.client.get(url)
+
+
+def hash_to_test():
+    """
+    Easy way to create test data for hash to test.
+
+    :var string text_test: holds test text
+    :var string text_format: holds format for test text
+    :var string hash_text: holds test hash
+
+    :return: test data array that contains text, format of text, hash.
+    """
+    text_test = 'hello'
+    text_format = 'utf-8'
+    hash_test = '2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824'
+    return text_test, text_format, hash_test
+
+
+def create_hash_db():
+    """
+    Creates database entry based on information supplied in hash_to_test function
+
+    :var array test: created data array from hash_to_test
+    :var Hash hash: Empty Hash instant.
+    :return: Modified Hash instant
+    """
+    test = hash_to_test()
+    hash = Hash()
+    hash.text = test[0]
+    hash.hash = test[2]
+    hash.save()
+    return hash
