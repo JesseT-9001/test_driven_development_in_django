@@ -19,7 +19,8 @@ Modifications:
 
 * added 'import hashing.views'
 * added urlpatterns - 'path('', hashing.views.home, name='home')',
-  path('hash/<str:hash>', hashing.views.hash, name='hash')
+  path('hash/<str:hash>', hashing.views.hash, name='hash'),
+  path('quickhash', hashing.view.quickhash, name='quickhash'),
 """
 from django.contrib import admin
 from django.urls import path
@@ -29,4 +30,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', hashing.views.home, name='home'),
     path('hash/<str:hash>', hashing.views.hash, name='hash'),
+    path('quickhash', hashing.views.quickhash, name='quickhash'),
 ]

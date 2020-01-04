@@ -6,6 +6,7 @@ from django.shortcuts import render, redirect
 from .forms import *
 from .models import *
 import hashlib
+from django.http import JsonResponse
 
 
 def home(request):
@@ -28,7 +29,7 @@ def home(request):
         filled_form = HashForm(request.POST)
         if filled_form.is_valid():
             text = filled_form.cleaned_data['text']
-            text_hash = hashlib.sha256(text.encode('utf-8')).hexdigest()
+            text_hash = create_hash(text)
             try:
                 Hash.objects.get(hash=text_hash)
             except Hash.DoesNotExist:
@@ -65,3 +66,33 @@ def hash(request, hash):
         'hash': hash
     }
     return render(request, template, context)
+
+
+def quickhash(request):
+    """
+
+    :param request: Request from client
+
+    :var string item: item to retrive from GET request
+    :var string text: text inputed by user
+    :var dictionary context: holds dictionary context to pass to html template.
+
+    :return: Json Response (hash value)
+    """
+    item = 'text'
+    text = request.GET[item]
+    context = {
+        'hash': create_hash(text)
+    }
+    return JsonResponse(context)
+
+
+def create_hash(text):
+    """
+    Runs hashing function from hashlib
+
+    :param text: text to hash
+
+    :return: hash value of text
+    """
+    return hashlib.sha256(text.encode('utf-8')).hexdigest()

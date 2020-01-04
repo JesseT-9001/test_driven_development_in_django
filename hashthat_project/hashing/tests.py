@@ -11,6 +11,7 @@ from .forms import HashForm
 import hashlib
 from .models import *
 from django.core.exceptions import ValidationError
+import time
 
 
 class FunctionalTest(TestCase):
@@ -63,6 +64,24 @@ class FunctionalTest(TestCase):
 
         hash_test = '2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824'
         self.assertIn(hash_test, self.browser.page_source)
+
+    def test_hash_ajax(self):
+        """
+        Uses time module to sleep and wait for ajax.
+
+        :var arrary test: Array of test variables
+        :var string text: allows focus to be put on textarea.
+
+        :except assertion: Raised if correct hash is not found in page source
+
+        :return: None
+        """
+        self.open_homepage()
+        test = hash_to_test()
+        text = self.browser.find_element_by_id(test[3])
+        text.send_keys(test[0])
+        time.sleep(5)
+        self.assertIn(test[2], self.browser.page_source)
 
     def open_homepage(self) -> None:
         """
@@ -206,7 +225,8 @@ def hash_to_test():
     text_test = 'hello'
     text_format = 'utf-8'
     hash_test = '2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824'
-    return text_test, text_format, hash_test
+    element_id = 'id_text'
+    return text_test, text_format, hash_test, element_id
 
 
 def create_hash_db():
