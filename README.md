@@ -1,2 +1,2 @@
 LinkedIn Learning project where I'm learning how to develop software by first creating the tests to pass. I am also 
-using this project to learn how to document code using sphinx.
+using this project to learn how to document code using sphinx and as a way to familiarize myself with github.
