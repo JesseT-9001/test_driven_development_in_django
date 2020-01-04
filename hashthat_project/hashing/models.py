@@ -1,3 +1,13 @@
 from django.db import models
 
-# Create your models here.
+
+class Hash(models.Model):
+    """
+    Hash Model
+
+    :var field text: Text field
+    :var field hash: Char field
+    """
+    text = models.TextField()
+    hash = models.CharField(max_length=64)
+

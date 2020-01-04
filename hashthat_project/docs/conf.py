@@ -1,8 +1,28 @@
-# Configuration file for the Sphinx documentation builder.
-#
-# This file only contains a selection of the most common options. For a full
-# list see the documentation:
-# https://www.sphinx-doc.org/en/master/usage/configuration.html
+"""
+Configuration file for the Sphinx documentation builder.
+
+This file only contains a selection of the most common options. For a full
+list see the documentation:
+https://www.sphinx-doc.org/en/master/usage/configuration.html
+
+Modifications:
+
+1) Uncommented import os, import sys, sys.path.insert(0, os.path.abspath('../../'))
+
+2) added extensions - 'sphinx.ext.autodoc'
+
+3) added add_module_names = False
+
+4) set up django documentation
+    * import django - imports django module
+    * sys.path.append(os.path.abspath('../')) - makes the django root director a path to use for os.eviron.setdefault.
+      Use this command if your sphinx config file is not pointed directly to the root of the django project.
+    * os.environ.setdefault("DJANGO_SETTINGS_MODULE", "hashthat.settings") - makes the setting file in your django app
+      the default setting files for the django module. If this part is causing errors when using make settings saying
+      that your django app is not a module and you are sure you are spelling it right, then the problem is that sys.path
+      is not storing your django root folder and it needs to be appended to it.
+    * django.setup() - setup sphinx with the django environment so it can document your django project successful.
+"""
 
 # -- Path setup --------------------------------------------------------------
 
@@ -12,7 +32,11 @@
 #
 import os
 import sys
+import django
 sys.path.insert(0, os.path.abspath('../../'))
+sys.path.append(os.path.abspath('../'))
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "hashthat.settings")
+django.setup()
 
 
 # -- Project information -----------------------------------------------------
@@ -28,7 +52,7 @@ author = 'Jesse'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc'
+    'sphinx.ext.autodoc',
 ]
 
 # Add any paths that contain templates here, relative to this directory.

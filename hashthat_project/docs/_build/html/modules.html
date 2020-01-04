@@ -51,23 +51,37 @@
 <dd class="field-even"><p><strong>assertion</strong> – Raised if test_text is not in the page source</p>
 </dd>
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>nothing</p>
+<dd class="field-odd"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
 
 </div>
-<div class="section" id="module-hashthat_project.hashing.tests">
-<span id="tests-py-module"></span><h2>tests.py module<a class="headerlink" href="#module-hashthat_project.hashing.tests" title="Permalink to this headline">¶</a></h2>
-<p>This module is used for creating functional and unit test.</p>
+<div class="section" id="module-hashing.tests">
+<span id="tests-py-module"></span><h2>tests.py module<a class="headerlink" href="#module-hashing.tests" title="Permalink to this headline">¶</a></h2>
+<p>This module is used for creating functional and unit tests.</p>
 <p>To run this module use the following command:
 ‘python manage.py test’</p>
 <dl class="class">
-<dt id="hashthat_project.hashing.tests.FunctionalTest">
-<em class="property">class </em><code class="sig-name descname">FunctionalTest</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#hashthat_project.hashing.tests.FunctionalTest" title="Permalink to this definition">¶</a></dt>
+<dt id="hashing.tests.FunctionalTest">
+<em class="property">class </em><code class="sig-name descname">FunctionalTest</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#hashing.tests.FunctionalTest" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
-<dt id="hashthat_project.hashing.tests.FunctionalTest.setUp">
-<code class="sig-name descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#hashthat_project.hashing.tests.FunctionalTest.setUp" title="Permalink to this definition">¶</a></dt>
+<dt id="hashing.tests.FunctionalTest.open_homepage">
+<code class="sig-name descname">open_homepage</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#hashing.tests.FunctionalTest.open_homepage" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function opens the homepage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>url</strong> (<em>string</em>) – Holds the url with port number as a string</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="hashing.tests.FunctionalTest.setUp">
+<code class="sig-name descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#hashing.tests.FunctionalTest.setUp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Hook method for setting up the test fixture before exercising it.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
@@ -80,8 +94,8 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="hashthat_project.hashing.tests.FunctionalTest.tearDown">
-<code class="sig-name descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#hashthat_project.hashing.tests.FunctionalTest.tearDown" title="Permalink to this definition">¶</a></dt>
+<dt id="hashing.tests.FunctionalTest.tearDown">
+<code class="sig-name descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#hashing.tests.FunctionalTest.tearDown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Hook method for deconstructing the test fixture after testing it.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -91,9 +105,10 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="hashthat_project.hashing.tests.FunctionalTest.test_hash_of_hello">
-<code class="sig-name descname">test_hash_of_hello</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#hashthat_project.hashing.tests.FunctionalTest.test_hash_of_hello" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dt id="hashing.tests.FunctionalTest.test_hash_of_hello">
+<code class="sig-name descname">test_hash_of_hello</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#hashing.tests.FunctionalTest.test_hash_of_hello" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function inputs the text ‘hello’ and checks if the output hash is correct</p>
+<dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>element_id</strong> (<em>string</em>) – Contains an element id in the form of a string</p></li>
@@ -109,8 +124,8 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="hashthat_project.hashing.tests.FunctionalTest.test_there_is_a_hompage">
-<code class="sig-name descname">test_there_is_a_hompage</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#hashthat_project.hashing.tests.FunctionalTest.test_there_is_a_hompage" title="Permalink to this definition">¶</a></dt>
+<dt id="hashing.tests.FunctionalTest.test_there_is_a_hompage">
+<code class="sig-name descname">test_there_is_a_hompage</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#hashing.tests.FunctionalTest.test_there_is_a_hompage" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function is used to test if there is a homepage.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
@@ -128,9 +143,327 @@
 </dd></dl>
 
 <dl class="class">
-<dt id="hashthat_project.hashing.tests.UnitTest">
-<em class="property">class </em><code class="sig-name descname">UnitTest</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#hashthat_project.hashing.tests.UnitTest" title="Permalink to this definition">¶</a></dt>
+<dt id="hashing.tests.UnitTest">
+<em class="property">class </em><code class="sig-name descname">UnitTest</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#hashing.tests.UnitTest" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="hashing.tests.UnitTest.create_response">
+<code class="sig-name descname">create_response</code><span class="sig-paren">(</span><em class="sig-param">url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hashing.tests.UnitTest.create_response" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates response for testing</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>url</strong> – Url used to assign generated response.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="hashing.tests.UnitTest.test_hash_form">
+<code class="sig-name descname">test_hash_form</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hashing.tests.UnitTest.test_hash_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests if there is a form created for hashing</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>form</strong> (<em>form</em>) – Hash form template</p></li>
+<li><p><strong>test_dict</strong> (<em>dictionary</em>) – holds test data</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>assertion</strong> – Raised if hash form template is not found.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="hashing.tests.UnitTest.test_hash_func_works">
+<code class="sig-name descname">test_hash_func_works</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hashing.tests.UnitTest.test_hash_func_works" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests if the hash function works when input value is hello.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>test</strong> (<em>tuple</em>) – holds the values we are testing, produced by hash_to_test().</p></li>
+<li><p><strong>text_hash</strong> (<em>string</em>) – hold result of hash function from hashlib</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>assertion</strong> – Raised if hash_test and text_hash is not equal.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="hashing.tests.UnitTest.test_hash_object">
+<code class="sig-name descname">test_hash_object</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hashing.tests.UnitTest.test_hash_object" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>test</strong> (<em>tuple</em>) – holds the values we are testing, produced by hash_to_test().</p></li>
+<li><p><a class="reference internal" href="#hashing.views.hash" title="hashing.views.hash"><strong>hash</strong></a> (<a class="reference internal" href="#hashing.models.Hash" title="hashing.models.Hash"><em>Hash</em></a>) – a Hash class instant.</p></li>
+<li><p><strong>pulled_hash</strong> (<a class="reference internal" href="#hashing.models.Hash" title="hashing.models.Hash"><em>Hash</em></a>) – A specific Hash class instant.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>assertion</strong> – Raised if pulled_hash Hash instant text is not the same as hash Hash instant text.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="hashing.tests.UnitTest.test_home_homepage_template">
+<code class="sig-name descname">test_home_homepage_template</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hashing.tests.UnitTest.test_home_homepage_template" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>home_url</strong> (<em>string</em>) – holds the url to the homepage.</p></li>
+<li><p><strong>response</strong> (<em>response</em>) – holds a get response.</p></li>
+<li><p><strong>home_template</strong> (<em>string</em>) – holds the template location of the homepage template</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>assertion</strong> – Raised if template homepage is not found.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="hashing.tests.UnitTest.test_viewing_hash">
+<code class="sig-name descname">test_viewing_hash</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hashing.tests.UnitTest.test_viewing_hash" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests if you can view the hash as a response</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#hashing.views.hash" title="hashing.views.hash"><strong>hash</strong></a> (<a class="reference internal" href="#hashing.models.Hash" title="hashing.models.Hash"><em>Hash</em></a>) – created database hash instant</p></li>
+<li><p><strong>url</strong> (<em>string</em>) – holds url to be tested as a string</p></li>
+<li><p><strong>response</strong> (<em>response</em>) – holds a self generated response</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>assertion</strong> – Raised if the response does not contain the text in hash.text</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="hashing.tests.create_hash_db">
+<code class="sig-name descname">create_hash_db</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hashing.tests.create_hash_db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates database entry based on information supplied in hash_to_test function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>test</strong> (<em>array</em>) – created data array from hash_to_test</p></li>
+<li><p><a class="reference internal" href="#hashing.views.hash" title="hashing.views.hash"><strong>hash</strong></a> (<a class="reference internal" href="#hashing.models.Hash" title="hashing.models.Hash"><em>Hash</em></a>) – Empty Hash instant.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Modified Hash instant</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="hashing.tests.hash_to_test">
+<code class="sig-name descname">hash_to_test</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hashing.tests.hash_to_test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Easy way to create test data for hash to test.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text_test</strong> (<em>string</em>) – holds test text</p></li>
+<li><p><strong>text_format</strong> (<em>string</em>) – holds format for test text</p></li>
+<li><p><strong>hash_text</strong> (<em>string</em>) – holds test hash</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>test data array that contains text, format of text, hash.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-hashthat_project.hashthat.settings">
+<span id="settings-py-module"></span><h2>settings.py module<a class="headerlink" href="#module-hashthat_project.hashthat.settings" title="Permalink to this headline">¶</a></h2>
+<p>Django settings for hashthat project.</p>
+<p>Generated by ‘django-admin startproject’ using Django 3.0.1.</p>
+<p>For more information on this file, see
+<a class="reference external" href="https://docs.djangoproject.com/en/3.0/topics/settings/">https://docs.djangoproject.com/en/3.0/topics/settings/</a></p>
+<p>For the full list of settings and their values, see
+<a class="reference external" href="https://docs.djangoproject.com/en/3.0/ref/settings/">https://docs.djangoproject.com/en/3.0/ref/settings/</a></p>
+<dl class="simple">
+<dt>Modifications:</dt><dd><p>INSTALLED_APPS: hashing</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="module-hashthat_project.docs.conf">
+<span id="config-py-module"></span><h2>config.py module<a class="headerlink" href="#module-hashthat_project.docs.conf" title="Permalink to this headline">¶</a></h2>
+<p>Configuration file for the Sphinx documentation builder.</p>
+<p>This file only contains a selection of the most common options. For a full
+list see the documentation:
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html">https://www.sphinx-doc.org/en/master/usage/configuration.html</a></p>
+<p>Modifications:</p>
+<ol class="arabic simple">
+<li><p>Uncommented import os, import sys, sys.path.insert(0, os.path.abspath(‘../../’))</p></li>
+<li><p>added extensions - ‘sphinx.ext.autodoc’</p></li>
+<li><p>added add_module_names = False</p></li>
+<li><dl class="simple">
+<dt>set up django documentation</dt><dd><ul class="simple">
+<li><p>import django - imports django module</p></li>
+<li><p>sys.path.append(os.path.abspath(‘../’)) - makes the django root director a path to use for os.eviron.setdefault.
+Use this command if your sphinx config file is not pointed directly to the root of the django project.</p></li>
+<li><p>os.environ.setdefault(“DJANGO_SETTINGS_MODULE”, “hashthat.settings”) - makes the setting file in your django app
+the default setting files for the django module. If this part is causing errors when using make settings saying
+that your django app is not a module and you are sure you are spelling it right, then the problem is that sys.path
+is not storing your django root folder and it needs to be appended to it.</p></li>
+<li><p>django.setup() - setup sphinx with the django environment so it can document your django project successful.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+<div class="section" id="module-hashthat_project.hashthat.urls">
+<span id="url-py-module"></span><h2>url.py module<a class="headerlink" href="#module-hashthat_project.hashthat.urls" title="Permalink to this headline">¶</a></h2>
+<p>hashthat URL Configuration</p>
+<dl class="simple">
+<dt>The <cite>urlpatterns</cite> list routes URLs to views. For more information please see:</dt><dd><p><a class="reference external" href="https://docs.djangoproject.com/en/3.0/topics/http/urls/">https://docs.djangoproject.com/en/3.0/topics/http/urls/</a></p>
+</dd>
+<dt>Examples:</dt><dd><dl class="simple">
+<dt>Function views</dt><dd><ol class="arabic simple">
+<li><p>Add an import:  from my_app import views</p></li>
+<li><p>Add a URL to urlpatterns:  path(‘’, views.home, name=’home’)</p></li>
+</ol>
+</dd>
+<dt>Class-based views</dt><dd><ol class="arabic simple">
+<li><p>Add an import:  from other_app.views import Home</p></li>
+<li><p>Add a URL to urlpatterns:  path(‘’, Home.as_view(), name=’home’)</p></li>
+</ol>
+</dd>
+<dt>Including another URLconf</dt><dd><ol class="arabic simple">
+<li><p>Import the include() function: from django.urls import include, path</p></li>
+<li><p>Add a URL to urlpatterns:  path(‘blog/’, include(‘blog.urls’))</p></li>
+</ol>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>Modifications:</p>
+<ul class="simple">
+<li><p>added ‘import hashing.views’</p></li>
+<li><p>added urlpatterns - ‘path(‘’, hashing.views.home, name=’home’)’,
+path(‘hash/&lt;str:hash&gt;’, hashing.views.hash, name=’hash’)</p></li>
+</ul>
+</div>
+<div class="section" id="module-hashing.views">
+<span id="views-py-module"></span><h2>views.py module<a class="headerlink" href="#module-hashing.views" title="Permalink to this headline">¶</a></h2>
+<p>This module is used to produce web-pages and handle requests.</p>
+<dl class="function">
+<dt id="hashing.views.hash">
+<code class="sig-name descname">hash</code><span class="sig-paren">(</span><em class="sig-param">request</em>, <em class="sig-param">hash</em><span class="sig-paren">)</span><a class="headerlink" href="#hashing.views.hash" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renders hash/&lt;str:hash&gt;</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> – request from client or homepage.</p></li>
+<li><p><strong>hash</strong> – a hash value used to reference the a specific page.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="#hashing.views.hash" title="hashing.views.hash"><strong>hash</strong></a> (<a class="reference internal" href="#hashing.models.Hash" title="hashing.models.Hash"><em>Hash</em></a>) – created database hash instant.</p></li>
+<li><p><strong>template</strong> (<em>string</em>) – holds homepage html template.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Rendered hash page with whatever context necessary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="hashing.views.home">
+<code class="sig-name descname">home</code><span class="sig-paren">(</span><em class="sig-param">request</em><span class="sig-paren">)</span><a class="headerlink" href="#hashing.views.home" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the homepage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>request</strong> – request from client.</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>filled_form</strong> (<em>form</em>) – holds filled out form data from the request.POST</p></li>
+<li><p><strong>text</strong> (<em>string</em>) – holds cleaned form data associated with key ‘text’</p></li>
+<li><p><strong>form</strong> (<em>form</em>) – Hash form form.</p></li>
+<li><p><strong>template</strong> (<em>string</em>) – holds homepage html template.</p></li>
+<li><p><strong>context</strong> (<em>dictionary</em>) – holds items to add to html when rendered.</p></li>
+<li><p><strong>to</strong> (<em>string</em>) – holds place to redirect the user to.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Rendered homepage with whatever context necessary.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>For POST requests redirects user to hash page with information about the hash</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-hashthat_project.hashing.forms">
+<span id="forms-py-module"></span><h2>forms.py module<a class="headerlink" href="#module-hashthat_project.hashing.forms" title="Permalink to this headline">¶</a></h2>
+<p>This modules handles all the forms for the hashing web-app.</p>
+<dl class="class">
+<dt id="hashthat_project.hashing.forms.HashForm">
+<em class="property">class </em><code class="sig-name descname">HashForm</code><span class="sig-paren">(</span><em class="sig-param">data=None</em>, <em class="sig-param">files=None</em>, <em class="sig-param">auto_id='id_%s'</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">initial=None</em>, <em class="sig-param">error_class=&lt;class 'django.forms.utils.ErrorList'&gt;</em>, <em class="sig-param">label_suffix=None</em>, <em class="sig-param">empty_permitted=False</em>, <em class="sig-param">field_order=None</em>, <em class="sig-param">use_required_attribute=None</em>, <em class="sig-param">renderer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hashthat_project.hashing.forms.HashForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates textbox to accept user input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>form</em>) – hold form text area.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-hashing.models">
+<span id="models-py-module"></span><h2>models.py module<a class="headerlink" href="#module-hashing.models" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="hashing.models.Hash">
+<em class="property">class </em><code class="sig-name descname">Hash</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#hashing.models.Hash" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hash Model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<em>field</em>) – Text field</p></li>
+<li><p><a class="reference internal" href="#hashing.views.hash" title="hashing.views.hash"><strong>hash</strong></a> (<em>field</em>) – Char field</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="exception">
+<dt id="hashing.models.Hash.DoesNotExist">
+<em class="property">exception </em><code class="sig-name descname">DoesNotExist</code><a class="headerlink" href="#hashing.models.Hash.DoesNotExist" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="exception">
+<dt id="hashing.models.Hash.MultipleObjectsReturned">
+<em class="property">exception </em><code class="sig-name descname">MultipleObjectsReturned</code><a class="headerlink" href="#hashing.models.Hash.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
 
 </div>
 </div>
@@ -156,7 +489,13 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Modules</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#module-func_test">func_test.py module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-hashthat_project.hashing.tests">tests.py module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-hashing.tests">tests.py module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-hashthat_project.hashthat.settings">settings.py module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-hashthat_project.docs.conf">config.py module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-hashthat_project.hashthat.urls">url.py module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-hashing.views">views.py module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-hashthat_project.hashing.forms">forms.py module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-hashing.models">models.py module</a></li>
 </ul>
 </li>
 </ul>

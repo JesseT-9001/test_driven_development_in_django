@@ -11,7 +11,7 @@ def func_test() -> None:
     :var string localhost_8000: Holds the localhost url with port number
     :var string test_text: Hold what string you would like tested
     :except assertion: Raised if test_text is not in the page source
-    :return: nothing
+    :return: None
     """
     safari = webdriver.Safari()
     localhost_8000 = 'http://localhost:8000'
